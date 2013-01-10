@@ -1,24 +1,50 @@
-# Omniauth::Layervault
+# OmniAuth LayerVault
 
-TODO: Write a gem description
+Official OmniAuth strategy for authenticating with LayerVault. You will need to [register your application](https://layervault.com/oauth/applications/new) first.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install the gem or add it to your Gemfile.
 
-    gem 'omniauth-layervault'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install omniauth-layervault
+```
+gem install omniauth-layervault
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+You will need to configure the strategy as middleware.
+
+**Rack**
+
+``` ruby
+use OmniAuth::Builder do
+  provider :layervault, ENV['LAYERVAULT_KEY'], ENV['LAYERVAULT_SECRET']
+end
+```
+
+**Rails 3**
+
+``` ruby
+Rails.application.config.middleware use OmniAuth::Builder do
+  provider :layervault, ENV['LAYERVAULT_KEY'], ENV['LAYERVAULT_SECRET']
+end
+```
+
+### Scopes
+
+LayerVault supports various scopes to limit what actions your application can perform with the API. To specify which scopes to use:
+
+``` ruby
+use OmniAuth::Builder do
+  provider :layervault, ENV['LAYERVAULT_KEY'], ENV['LAYERVAULT_SECRET'], scope: "user+files"
+end
+```
+
+**Available Scopes**
+
+* user: default, basic user information
+* files: read access to the user's files and folders
+* write: write access to the user's files and folders
 
 ## Contributing
 
