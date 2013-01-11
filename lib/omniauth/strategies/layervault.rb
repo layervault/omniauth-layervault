@@ -5,7 +5,7 @@ module OmniAuth
     class LayerVault < OmniAuth::Strategies::OAuth2
       option :name, :layervault
 
-      options :client_options, {
+      option :client_options, {
         :site => "https://layervault.com",
         :authorize_url => "/oauth/authorize"
       }
