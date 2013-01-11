@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'omniauth-layervault/version'
+require 'omniauth/omniauth-layervault/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "omniauth-layervault"
-  gem.version       = Omniauth::Layervault::VERSION
+  gem.version       = OmniAuth::LayerVault::VERSION
   gem.authors       = ["Ryan LeFevre"]
   gem.email         = ["ryan@layervault.com"]
   gem.description   = %q{Official OmniAuth strategy for LayerVault}
