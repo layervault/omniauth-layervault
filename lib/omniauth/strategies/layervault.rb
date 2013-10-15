@@ -6,8 +6,8 @@ module OmniAuth
       option :name, :layervault
 
       option :client_options, {
-        :site => "https://layervault.com",
-        :authorize_url => "/oauth/authorize"
+        site: "https://layervault.com",
+        authorize_url: "/oauth/authorize"
       }
 
       uid { raw_info["id"].to_s }
