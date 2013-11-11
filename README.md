@@ -1,6 +1,6 @@
 # OmniAuth LayerVault
 
-Official OmniAuth strategy for authenticating with LayerVault. You will need to [register your application](https://layervault.com/oauth/applications/new) first.
+Official OmniAuth strategy for authenticating with LayerVault. You will need to [register your application](https://layervault.com/settings/development) first.
 
 ## Installation
 
