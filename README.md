@@ -25,7 +25,7 @@ end
 **Rails 3**
 
 ``` ruby
-Rails.application.config.middleware use OmniAuth::Builder do
+Rails.application.config.middleware.use OmniAuth::Builder do
   provider :layervault, ENV['LAYERVAULT_KEY'], ENV['LAYERVAULT_SECRET']
 end
 ```
